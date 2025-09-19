@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container modern-container">
+        <!-- <h1 style="font-size:2.5rem; font-weight:700; letter-spacing:1px; margin-bottom:24px; color:#00e6d3; text-shadow:0 2px 12px #0008;">🤖 AI Assistant</h1> -->
+        <div id="output" class="modern-output"></div>
+        <div class="input-box modern-input-box">
+            <div class="modern-checkbox">
+                <input type="checkbox" id="usePdfCheckbox">
+                <label for="usePdfCheckbox">Use PDF</label>
+            </div>
+            <label for="fileUpload" class="file-upload-label">
+                <input type="file" id="fileUpload" style="display:none;">
+                <span class="file-upload-btn">📎</span>
+            </label>
+            <div class="input-mic-wrapper modern-mic-wrapper">
+                <input type="text" id="commandInput" placeholder="Type or speak your command...">
+                <button id="micBtn">🎤</button>
+            </div>
+            <button id="sendBtn" class="modern-send-btn"><img src="{{ url_for('static', filename='images/send2.png') }}" style="width:28px; height:28px;"></button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
